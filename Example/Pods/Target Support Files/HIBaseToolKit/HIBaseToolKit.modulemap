@@ -1,0 +1,6 @@
+framework module HIBaseToolKit {
+  umbrella header "HIBaseToolKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

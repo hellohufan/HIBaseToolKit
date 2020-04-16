@@ -62,11 +62,11 @@
 		68CD12C43B561C24AB82B213 /* Pods-HIBaseToolKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIBaseToolKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-HIBaseToolKit_Example/Pods-HIBaseToolKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6F3F24F794331E664A736C4F /* Pods-HIBaseToolKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIBaseToolKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-HIBaseToolKit_Tests/Pods-HIBaseToolKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7BA0152AF499E38D2DA3FE92 /* HIBaseToolKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HIBaseToolKit.podspec; path = ../HIBaseToolKit.podspec; sourceTree = "<group>"; };
+		7BA0152AF499E38D2DA3FE92 /* HIBaseToolKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HIBaseToolKit.podspec; path = ../HIBaseToolKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8E528A00431E0067A92B1C5D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8E528A00431E0067A92B1C5D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DDAF9326214A583D320823FA /* Pods_HIBaseToolKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIBaseToolKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E825952E6CC2CD6511056634 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E825952E6CC2CD6511056634 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 				4EEF8DCF25945017206B2418 /* Pods-HIBaseToolKit_Tests.debug.xcconfig */,
 				6F3F24F794331E664A736C4F /* Pods-HIBaseToolKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -259,6 +258,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

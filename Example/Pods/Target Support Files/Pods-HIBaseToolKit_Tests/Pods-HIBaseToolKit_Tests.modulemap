@@ -1,0 +1,6 @@
+framework module Pods_HIBaseToolKit_Tests {
+  umbrella header "Pods-HIBaseToolKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

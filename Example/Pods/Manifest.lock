@@ -1,0 +1,27 @@
+PODS:
+  - Expecta (1.0.6)
+  - HIBaseToolKit (0.1.0)
+  - Specta (1.0.7)
+
+DEPENDENCIES:
+  - Expecta
+  - HIBaseToolKit (from `../`)
+  - Specta
+
+SPEC REPOS:
+  trunk:
+    - Expecta
+    - Specta
+
+EXTERNAL SOURCES:
+  HIBaseToolKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  HIBaseToolKit: 1346250b6144a0aea9c0b9661e6cedac7d94dedf
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+
+PODFILE CHECKSUM: 1f7de992268c02ab2af55f23846b210fb0322e4f
+
+COCOAPODS: 1.8.4
