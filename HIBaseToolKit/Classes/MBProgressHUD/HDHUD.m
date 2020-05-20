@@ -13,18 +13,15 @@
 
 @end
 
-static HDHUD *HDData = NULL;
 @implementation HDHUD
 
 + (HDHUD *)instance{
-    @synchronized(self){
-        if (HDData) {
-            [HDData hiden];
-            HDData = nil;
-        }
-        HDData = [[HDHUD alloc] init];
-    }
-    return HDData;
+    static HDHUD *hud = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        hud = [[HDHUD alloc] init];
+    });
+    return hud;
 }
 
 + (HDHUD *)showLoading:(NSString *)text on:(UIView *)view {
@@ -55,13 +52,13 @@ static HDHUD *HDData = NULL;
     manager.progressHud.removeFromSuperViewOnHide = YES;
     
     //设置方框view为该模式后修改颜色才有效果
-//    manager.progressHud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    //manager.progressHud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     
     //设置方框view背景色
     manager.progressHud.color = [UIColor clearColor];
     
     //设置总背景view的背景色，并带有透明效果
-//    manager.progressHud.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+    //manager.progressHud.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
     manager.progressHud.customView = cusImageV;
     manager.progressHud.customView.backgroundColor = [UIColor clearColor];
     return manager;
@@ -79,7 +76,7 @@ static HDHUD *HDData = NULL;
 - (void)show:(NSString *)text on:(UIView *)view{
     self.progressHud     = [MBProgressHUD showHUDAddedTo:view animated:YES];
     self.progressHud.delegate        = self;
-    self.progressHud.labelText       = nil;
+    self.progressHud.labelText       = text;
     self.progressHud.backgroundColor = [UIColor clearColor];
     self.progressHud.removeFromSuperViewOnHide = YES;
 }
