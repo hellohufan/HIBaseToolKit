@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HDDateHelper : NSObject
+@interface HIDateHelper : NSObject
 
 /**
  *  在某个时间基础上，加n个月

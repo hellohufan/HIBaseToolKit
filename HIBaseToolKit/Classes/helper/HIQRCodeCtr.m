@@ -6,7 +6,7 @@
 //  Copyright © 2018年 hufan. All rights reserved.
 //
 
-#import "HDQRCodeCtr.h"
+#import "HIQRCodeCtr.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface ShadowView : UIView
@@ -16,7 +16,7 @@
 
 @end
 
-@interface HDQRCodeCtr ()<AVCaptureMetadataOutputObjectsDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
+@interface HIQRCodeCtr ()<AVCaptureMetadataOutputObjectsDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
     
     ShadowView *shadowView;
 }
@@ -36,7 +36,7 @@
 @end
 
 
-@implementation HDQRCodeCtr
+@implementation HIQRCodeCtr
 
 - (void)viewDidLoad {
     [super viewDidLoad];

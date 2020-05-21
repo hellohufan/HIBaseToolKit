@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Hu Dennis. All rights reserved.
 //
 
-#import "HDDateHelper.h"
+#import "HIDateHelper.h"
 
-@implementation HDDateHelper
+@implementation HIDateHelper
 
 /** 关于date **/
 #pragma mark - time
@@ -42,7 +42,7 @@
         NSLog(@"警告:传入参数date为空!");
         return nil;
     }
-    return [HDDateHelper stringWithDate:date withFormat:@"yyyy-MM-dd"];
+    return [HIDateHelper stringWithDate:date withFormat:@"yyyy-MM-dd"];
 }
 
 + (NSDate *)dateFromString:(NSString *)sDate{
@@ -81,12 +81,12 @@
         NSLog(@"传入目标时间格式“theFormate”为空！");
         return nil;
     }
-    NSDate *date0 = [HDDateHelper dateWithString:strDate formate:oFormate];
+    NSDate *date0 = [HIDateHelper dateWithString:strDate formate:oFormate];
     if (!date0) {
         NSLog(@"时间转换失败！");
         return nil;
     }
-    NSString *str = [HDDateHelper stringWithDate:date0 withFormat:theFormate];
+    NSString *str = [HIDateHelper stringWithDate:date0 withFormat:theFormate];
     return str;
 }
 
@@ -104,9 +104,9 @@
     }else if((temp = temp/24) < 10){
         result = [NSString stringWithFormat:@"%d天前", (int)temp];
     }else if(temp < 365){
-        result = [HDDateHelper stringWithDate:compareDate withFormat:@"MM-dd"];
+        result = [HIDateHelper stringWithDate:compareDate withFormat:@"MM-dd"];
     }else{
-        result = [HDDateHelper stringWithDate:compareDate withFormat:@"yyyy-MM-dd"];
+        result = [HIDateHelper stringWithDate:compareDate withFormat:@"yyyy-MM-dd"];
     }
     return  result;
 }

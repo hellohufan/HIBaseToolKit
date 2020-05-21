@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HDQRCodeCtr : UIViewController
+@interface HIQRCodeCtr : UIViewController
 
 @property (nonatomic, copy) void (^scanFinishedBlock)(NSString *result);
 
