@@ -1,9 +1,9 @@
 //
 //  UIView+LoadFromNib.h
-//  HDStudio
 //
-//  Created by Hu Dennis on 15/1/20.
-//  Copyright (c) 2015年 Hu Dennis. All rights reserved.
+//  Created by IVAN on 14/12/30.
+//  Copyright (c) 2014年 IVAN. All rights reserved.
+//
 //
 
 #import <UIKit/UIKit.h>

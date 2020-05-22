@@ -313,7 +313,7 @@
     components.second = 0;
     return [CURRENT_CALENDAR dateFromComponents:components];
 }
-// Thanks gsempe & mteece
+
 - (NSDate *) dateAtEndOfDay
 {
     NSDateComponents *components = [[NSDate currentCalendar] components:DATE_COMPONENTS fromDate:self];

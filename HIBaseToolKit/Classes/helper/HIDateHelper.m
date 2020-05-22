@@ -13,22 +13,14 @@
 /** 关于date **/
 #pragma mark - time
 
-+ (NSString *)readNowTimeWithFormate:(NSString *)yyyyMMddhhmmss{
++ (nonnull NSString *)readNowTimeWithFormate:(nonnull NSString *)yyyyMMddhhmmss{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter	setDateFormat:yyyyMMddhhmmss];//yyyyMMddhhmmss
     NSString *sTime = [formatter stringFromDate: [NSDate date]];
     return sTime;
 }
 
-+ (NSString *)stringWithDate:(NSDate *)date withFormat:(NSString *)yyyyMMddhhmmss{
-    if (!date) {
-        NSLog(@"警告:传入参数date为空!");
-        return nil;
-    }
-    if (yyyyMMddhhmmss.length == 0) {
-        NSLog(@"传入时间格式为空！");
-        return nil;
-    }
++ (nonnull NSString *)stringWithDate:(nonnull NSDate *)date withFormat:(nonnull NSString *)yyyyMMddhhmmss{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.AMSymbol = @"上午";
     formatter.PMSymbol = @"下午";
@@ -37,60 +29,29 @@
     return sTime;
 }
 
-+ (NSString *)formatterDate:(NSDate *)date{
-    if (!date) {
-        NSLog(@"警告:传入参数date为空!");
-        return nil;
-    }
++ (nonnull NSString *)formatterDate:(nonnull NSDate *)date{
     return [HIDateHelper stringWithDate:date withFormat:@"yyyy-MM-dd"];
 }
 
-+ (NSDate *)dateFromString:(NSString *)sDate{
-    if (sDate.length > 0) {
-        NSLog(@"传入参数有误");
-        return nil;
-    }
++ (NSDate *)dateFromString:(nonnull NSString *)sDate{
     return [self dateWithString:sDate formate:@"yyyy.MM.dd"];
 }
 
-+ (NSDate *)dateWithString:(NSString *)sTime formate:(NSString *)formate{
-    if (sTime.length == 0) {
-        NSLog(@"传入时间为空！");
-        return nil;
-    }
-    if (formate.length == 0) {
-        NSLog(@"传入时间格式为空！");
-        return nil;
-    }
++ (nonnull NSDate *)dateWithString:(nonnull NSString *)sTime formate:(nonnull NSString *)formate{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
     [formatter setDateFormat:formate];
     NSDate *date = [formatter dateFromString:sTime];
     return date;
 }
 
-+ (NSString *)strinDateWithStringDate:(NSString *)strDate originalFormate:(NSString *)oFormate toFormate:(NSString *)theFormate{
-    if (!strDate || strDate.length == 0) {
-        NSLog(@"传入时间为空！");
-        return nil;
-    }
-    if (oFormate.length == 0) {
-        NSLog(@"传入时间格式“oFormate”为空！");
-        return nil;
-    }
-    if (theFormate.length == 0) {
-        NSLog(@"传入目标时间格式“theFormate”为空！");
-        return nil;
-    }
-    NSDate *date0 = [HIDateHelper dateWithString:strDate formate:oFormate];
-    if (!date0) {
-        NSLog(@"时间转换失败！");
-        return nil;
-    }
-    NSString *str = [HIDateHelper stringWithDate:date0 withFormat:theFormate];
++ (nonnull NSString *)strinDateWithStringDate:(nonnull NSString *)strDate originalFormate:(nonnull NSString *)formate toFormate:(nonnull NSString *)theFormate{
+
+    NSDate *date = [HIDateHelper dateWithString:strDate formate:formate];
+    NSString *str = [HIDateHelper stringWithDate:date withFormat:theFormate];
     return str;
 }
 
-+ (NSString *)getHumanityTime:(NSDate *)compareDate{
++ (nonnull NSString *)getHumanityTime:(nonnull NSDate *)compareDate{
     NSTimeInterval timeInterval = [compareDate timeIntervalSinceNow];
     timeInterval = -timeInterval;
     long temp = 0;
@@ -111,7 +72,7 @@
     return  result;
 }
 
-+ (NSDate *)addMonth:(NSDate *)basedMonth count:(int)count{
++ (nonnull NSDate *)addMonth:(nonnull NSDate *)basedMonth count:(int)count{
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
     [dateComponents setMonth:count];
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -119,24 +80,12 @@
     return newDate;
 }
 
-+ (NSDate *)addDay:(NSDate *)basedDate count:(int)count{
++ (nonnull NSDate *)addDay:(nonnull NSDate *)basedDate count:(int)count{
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
     [dateComponents setDay:count];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDate *newDate = [calendar dateByAddingComponents:dateComponents toDate:basedDate options:0];
     return newDate;
-}
-
-+ (NSString *)getTheDateOfYearsAgo:(NSUInteger)years{
-    NSString *now = [self readNowTimeWithFormate:@"yyyy-MM-dd"];
-    int y = [now substringToIndex:4].intValue;
-    y = y - (int)years;
-    if (y < 0) {
-        NSLog(@"Error:传入年数有误，years = %d", (int)years);
-        return nil;
-    }
-    NSString *d = [NSString stringWithFormat:@"%d%@", y, [now substringFromIndex:4]];
-    return d;
 }
 
 @end
