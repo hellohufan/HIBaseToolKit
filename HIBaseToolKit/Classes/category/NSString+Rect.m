@@ -7,9 +7,6 @@
 
 #import "NSString+Rect.h"
 
-#import <AppKit/AppKit.h>
-
-
 @implementation NSString (Rect)
 //自适应宽度
 - (CGFloat)widthWithFont:(UIFont *)font widthMax:(NSInteger)max{
