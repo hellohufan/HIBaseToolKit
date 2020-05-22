@@ -10,15 +10,10 @@
 #endif
 #endif
 
-#import "UICollectionView+HDRect.h"
-#import "UIImage+Color.h"
-#import "UITextView+Placeholder.h"
-#import "UIView+LoadFromNib.h"
-#import "HDDateHelper.h"
-#import "HDQRCodeCtr.h"
-#import "HDStringHelper.h"
-#import "HDHUD.h"
-#import "MBProgressHUD.h"
+#import "HDInstance.h"
+#import "HDWeakObject.h"
+#import "HILabel.h"
+#import "HIQRCodeCtr.h"
 
 FOUNDATION_EXPORT double HIBaseToolKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char HIBaseToolKitVersionString[];
