@@ -2,6 +2,8 @@
 //  HILabel.h
 //  Vehicular
 //
+//  可以纵向居中的label
+//
 //  Created by hufan on 2020/5/14.
 //  Copyright © 2020 Yelena. All rights reserved.
 //
