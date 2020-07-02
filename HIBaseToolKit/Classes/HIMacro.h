@@ -19,6 +19,9 @@
 
 #define HISCREEN_WIDTH       ([UIScreen mainScreen].bounds.size.width)
 #define HISCREEN_HEIGHT      ([UIScreen mainScreen].bounds.size.height)
+#define SIZE(w, h)           CGSizeMake(w, h)
+#define POINT(x, y)          CGPointMake(x, y)
+#define RECT(x, y, w, h)     CGRectMake(x, y, w, h)
 
 #pragma mark -
 #pragma mark 图片
@@ -57,7 +60,7 @@
 #ifdef DEBUG
 #define HILog(FORMAT, ...)      fprintf(stderr, "【%s】 %s ‖ 〖LINE:%li〗【MESSAGE】:\n%s\n", [[[NSString stringWithUTF8String: __FILE__] lastPathComponent] UTF8String], __PRETTY_FUNCTION__, (long)__LINE__, [[NSString stringWithFormat: FORMAT, ## __VA_ARGS__] UTF8String]);
 #else
-#define HILog(fmt, ...)
+#define HILog(fmt, ...) 
 #endif
 
 #pragma mark -
@@ -83,6 +86,10 @@
 
 #define GCD_Lock()                      dispatch_semaphore_wait(self->_lock, DISPATCH_TIME_FOREVER)
 #define GCD_Unlock()                    dispatch_semaphore_signal(self->_lock)
+
+#define HIWEAK(type)    __weak typeof(type) weak##type = type;
+#define HISTRONG(type)  __strong typeof(type) type = weak##type;
+#define HIBLOCK_EXEC(block, ...) if (block) { block(__VA_ARGS__);};
 
 #pragma mark -
 #pragma mark 颜色
