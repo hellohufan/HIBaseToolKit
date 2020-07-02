@@ -19,9 +19,9 @@
 
 #define HISCREEN_WIDTH       ([UIScreen mainScreen].bounds.size.width)
 #define HISCREEN_HEIGHT      ([UIScreen mainScreen].bounds.size.height)
-#define SIZE(w, h)           CGSizeMake(w, h)
-#define POINT(x, y)          CGPointMake(x, y)
-#define RECT(x, y, w, h)     CGRectMake(x, y, w, h)
+#define HISIZE(w, h)           CGSizeMake(w, h)
+#define HIPOINT(x, y)          CGPointMake(x, y)
+#define HIRECT(x, y, w, h)     CGRectMake(x, y, w, h)
 
 #pragma mark -
 #pragma mark 图片
@@ -69,8 +69,8 @@
 #define HIFONT(FONTSIZE)                  [UIFont systemFontOfSize:FONTSIZE]
 #define HIBOLD(FONTSIZE)                  [UIFont boldSystemFontOfSize:FONTSIZE]
 #define HICUSTOM_FONT(NAME, FONTSIZE)     [UIFont fontWithName:(NAME) size:(FONTSIZE)]
-#define FONTBOLD(p)                       [UIFont fontWithName:@"PingFangSC-Semibold" size:p]
-#define FONTREGULAR(p)                    [UIFont fontWithName:@"PingFangSC-Regular" size:p]
+#define HIFONTBOLD(p)                       [UIFont fontWithName:@"PingFangSC-Semibold" size:p]
+#define HIFONTREGULAR(p)                    [UIFont fontWithName:@"PingFangSC-Regular" size:p]
 
 #pragma mark -
 #pragma mark GCD
