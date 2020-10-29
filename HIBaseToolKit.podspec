@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HIBaseToolKit'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'An based tool kit for OC'
 
 # This description is used to generate tags and improve search results.
