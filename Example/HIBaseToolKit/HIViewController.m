@@ -7,6 +7,8 @@
 //
 
 #import "HIViewController.h"
+#import <HIAlert.h>
+#import <HIMacro.h>
 
 @interface HIViewController ()
 
@@ -18,6 +20,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+}
+
+- (IBAction)doAlert:(id)sender{
+    [HIAlert alert:@"你好，这是一条弹出消息" confirmHandler:^(UIAlertAction * _Nonnull action) {
+        HILOG(@"这是一条Log信息");
+    }];
 }
 
 - (void)didReceiveMemoryWarning

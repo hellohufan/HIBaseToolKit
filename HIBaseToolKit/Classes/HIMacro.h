@@ -58,7 +58,7 @@
 #pragma mark 日志工具
 
 #ifdef DEBUG
-#define HILOG(FORMAT, ...)      fprintf(stderr, "【%s】 %s ‖ 〖LINE:%li〗【MESSAGE】:\n%s\n", [[[NSString stringWithUTF8String: __FILE__] lastPathComponent] UTF8String], __PRETTY_FUNCTION__, (long)__LINE__, [[NSString stringWithFormat: FORMAT, ## __VA_ARGS__] UTF8String]);
+#define HILOG(FORMAT, ...)      fprintf(stderr, "==================================================================<\n [File]: %s \n [Function]: %s \n [Line]: %li \n [LOG]: %s\n==================================================================/>\n", [[[NSString stringWithUTF8String: __FILE__] lastPathComponent] UTF8String], __PRETTY_FUNCTION__, (long)__LINE__, [[NSString stringWithFormat: FORMAT, ## __VA_ARGS__] UTF8String]);
 #else
 #define HILog(fmt, ...) 
 #endif

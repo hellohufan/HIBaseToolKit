@@ -1,6 +1,6 @@
 PODS:
   - Expecta (1.0.6)
-  - HIBaseToolKit (0.1.3)
+  - HIBaseToolKit (0.2.2)
   - Specta (1.0.7)
 
 DEPENDENCIES:
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  HIBaseToolKit: ab6ad7b77284ca1ca952054594f9745096841635
+  HIBaseToolKit: 91dd369ecd6ed4cd86efe39d50b8ce32f3633e57
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
 PODFILE CHECKSUM: efa303ffd4cdf96eb5bc14e753d073413c63ea65
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0.beta.2

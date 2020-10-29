@@ -10,10 +10,13 @@
 #endif
 #endif
 
-#import "HDInstance.h"
 #import "HDWeakObject.h"
+#import "HIAlert.h"
+#import "HIHUD.h"
 #import "HILabel.h"
-#import "HIQRCodeCtr.h"
+#import "HILog.h"
+#import "HIMacro.h"
+#import "HIToast.h"
 
 FOUNDATION_EXPORT double HIBaseToolKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char HIBaseToolKitVersionString[];
